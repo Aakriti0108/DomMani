@@ -25,5 +25,5 @@ li[1].style.fontWeight='bold';
 li[1].style.backgroundColor ='yellow';
 for(let i=0;i<li.length;i++)
 {
-    li[i].style.backgroundColor="#f8f8f8";
+    li[i].style.backgroundColor="#ff0000";
 }
