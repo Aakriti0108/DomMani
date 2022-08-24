@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    
+}
+p{
+    text-align: center;
+}
+body{
+    background-color: brown;
+    border: 2px solid rgba(12, 19, 217, 0.861) ;
+    margin: 200px ;
+    align-self: center;
+    margin-top: 2%;
+    border-radius: 5%;
+    display: grid;
+}
+.box{
+    background-color: pink;
+    border-radius: 5%;
+}
+input{
+    width:90%;
+    height:10mm;
+    margin: 20px;
+}
+
+    
+
+
+ 
