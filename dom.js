@@ -48,21 +48,60 @@
 // var third=document.querySelector('.list-group-item:nth-child(3)')
 // third.style.color='green';
 
-var seconditem=document.querySelector('.list-group-item:nth-child(2)')
-seconditem.style.backgroundColor='green';
+// var seconditem=document.querySelector('.list-group-item:nth-child(2)')
+// seconditem.style.backgroundColor='green';
 
- var third=document.querySelector('.list-group-item:nth-child(3)')
- third.style.color='rgba(0,0,0,0)';
+//  var third=document.querySelector('.list-group-item:nth-child(3)')
+//  third.style.color='rgba(0,0,0,0)';
 
- let seconditem2 =document.querySelectorAll('li:nth-child(2)');
- let even =document.querySelectorAll('li:nth-child(even)')
- let odd=document.querySelectorAll('li:nth-child(odd)')
- for(let i=0;i<even.length;i++)
- {
-    even[i].style.background='green';
+//  let seconditem2 =document.querySelectorAll('li:nth-child(2)');
+//  let even =document.querySelectorAll('li:nth-child(even)')
+//  let odd=document.querySelectorAll('li:nth-child(odd)')
+//  for(let i=0;i<even.length;i++)
+//  {
+//     even[i].style.background='green';
    
-    odd[i].style.backgroundColor='yellow';
-    seconditem2[i].style.backgroundColor='red';
- }
+//     odd[i].style.backgroundColor='yellow';
+//     seconditem2[i].style.backgroundColor='red';
+//  }
+
+ var itemList=document.querySelector('#items');
+ itemList.parentNode.style.backgroundColor='#f4f4f4';
+ console.log(itemList.parentNode);
+ console.log(itemList.children);
+ console.log(itemList.children[1]);
+ itemList.children[1].style.backgroundColor='pink';
+ console.log(itemList.firstChild);
+ itemList.firstElementChild.textContent='hello!';
+ console.log(itemList.firstChild);
+ itemList.lastElementChild.textContent='hello2!';
+ console.log(itemList.nextSibling);
+ console.log(itemList.nextElementSibling);
+ console.log(itemList.previousSibling);
+ console.log(itemList.previousElementSibling);
+ itemList.previousElementSibling.style.color='green';
+
+ var newDiv=document.createElement('div');
+ 
+ newDiv.className='hello!';
+ newDiv.id='hello!';
+ newDiv.setAttribute('title','helloDiv');
+ console.log(newDiv);
+ var newDivtext=document.createTextNode('hello World!');
+ newDiv.appendChild(newDivtext);
+ var container=document.querySelector('header .container')
+ var h1=document.querySelector('header h1')
+ console.log(newDiv);
+ newDiv.style.backgroundColor='pink';
+ container.insertBefore(newDiv,h1)
+ 
+
+
+
+
 
  
+
+
+
+
