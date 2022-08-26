@@ -1,4 +1,4 @@
-<!-- <html>
+<html>
 <body>
     <form onsubmit="SaveetoLocalStorage(event)">
         <label >Name:</label>
@@ -7,20 +7,35 @@
         <input type="email" name="emailID">
         <button>Submit</button>
     </form>
+    <ul id="listofUsers"></ul>
     <script>
         function SaveetoLocalStorage(event)
         {
             event.preventDefault();
            const name=event.target.nameu.value;
             const email=event.target.emailID.value;
-            localStorage.setItem('name', name);
-            localStorage.setItem('email', email);
+            // localStorage.setItem('name', name);
+            // localStorage.setItem('email', email);
+            const myobj={
+            name,
+            email
         }
+       localStorage.setItem(myobj.email,JSON.stringify(myobj));
+        showNewUserOnScreen(myobj)
+        // let myobj_deserialized=JSON.parse(localStorage.getItem("myobj"));
+        // console.log(myobj_deserialized);
+    }
+
+    function showNewUserOnScreen(user){
+        const parentNode=document.getElementById('listofUsers')
+        const childHTML=`<li> ${user.name}-${user.email}</li>`
+        parentNode.innerHTML=parentNode.innerHTML+childHTML;
+    }
     </script>
 </body>
-</html> -->
+</html> 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,4 +58,4 @@
         console.log(myobj_deserialized);
     </script>
 </body>
-</html>
+</html> -->
