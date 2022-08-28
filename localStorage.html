@@ -14,16 +14,16 @@
             event.preventDefault();
            const name=event.target.nameu.value;
             const email=event.target.emailID.value;
-            // localStorage.setItem('name', name);
-            // localStorage.setItem('email', email);
+            localStorage.setItem('name', name1);
+            localStorage.setItem('email', email);
             const myobj={
             name,
             email
         }
        localStorage.setItem(myobj.email,JSON.stringify(myobj));
         showNewUserOnScreen(myobj)
-        // let myobj_deserialized=JSON.parse(localStorage.getItem("myobj"));
-        // console.log(myobj_deserialized);
+        let myobj_deserialized=JSON.parse(localStorage.getItem("myobj"));
+        console.log(myobj_deserialized);
     }
 
     function showNewUserOnScreen(user){
